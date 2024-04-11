@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 제거</title>
+</head>
+<body>
+    <script>
+        // 객체 생성
+        const student = {
+            // 속성 지정
+            이름: '박문수',
+            나이: 40,
+            직업: '변호사',
+            주소: '서울시'
+        };
+        // toString 메서드 지정
+        student.toString = function() {
+            let output = ''; // 수정: 빈 문자열로 초기화
+            for (let key in this) {
+                // toString은 제외
+                if (key != 'toString') {
+                    output += key + ' : ' + this[key] + '<br>'; // 수정: += 연산자로 문자열 추가
+                }
+            }
+            return output;
+        };
+        // 객체의 속성 목록 출력
+        document.write(student.toString() + '<br>');
+
+        // 속성 제거
+        delete student.나이;
+        document.write(student.toString());
+    </script>
+</body>
+</html>

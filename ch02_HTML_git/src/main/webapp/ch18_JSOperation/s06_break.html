@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break</title>
+</head>
+
+<body>
+
+    <script>
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j < 5; j++) {
+                //break가 포함된 반복문만 빠져나감
+                if (j == 3) break;
+                document.write(i + ',' + j + '<br>');
+            }
+        }
+
+        document.write('-------------------<br>');
+
+        //레이블을 사용하여 중첩 루프를 동시에 빠져나가는 코드
+        outer_loop:
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j < 5; j++) {
+                //레이블이 명시된 반복문을 빠져나간다.
+                if (j == 3) break outer_loop;
+                document.write(i + ',' + j + '<br>');
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 호이스팅 Variable Hoisting</title>
+</head>
+<body>
+    <script>
+        /*
+        자바스크립트 엔진은 특수 코드를 한 줄씩 순차적으로 실행하기에 앞서 먼저 소스코드의 평가
+        과정을 거치면서 소스 코드를 실행하기 위한 준비를 한다.
+        이때 소스코드 실행을 위한 준비 단계인 소스코드의 평가 과정에서 자바스크립트 엔진은
+        변수 선언을 포함한 모든 선언문(변수 선언문, 함수 선언문 등)을 소스 코드에서 찾아내 먼저 실행한다.
+        그리고 소스 코드의 평가 과정이 끝나면 비로소 변수 선언을 포함한 모든 선언문을 제외하고 
+        소스코드를 한 줄씩 순차적으로 실행한다.
+        */
+        document.write(score);
+
+        var score; //변수 선언
+
+    </script>
+</body>
+</html>

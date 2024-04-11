@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>load</title>
+    <script>
+        //윈도우가 로드될 때 onload와 연결된 함수가 실행
+        window.onload=function()    {
+            alert('문서가 로드되었습니다.');
+            document.body.style.backgroundColor = 'yellow';
+            let notice = document.getElementById('notice');
+            notice.innerHTML = '날씨 맑음!!';
+        }
+    </script>
+</head>
+<body>
+    <div id="notice"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>text-overflow</title>
+
+<style type="text/css">
+div{
+	width : 100px;
+	border : 1px solid black;
+	white-space : nowrap; /* 공백 불허, 줄바꿈 불허 */
+	/* div를 벗어난 데이터 표시 방법 지정 */
+	overflow: hidden; /* div 벗어난 데이터를 숨김 */
+	
+	text-overflow: ellipsis;
+	/* clip이 넘치는 텍스트를 잘라버린다. (기본값) */
+	/* ellipsis (말 줄임표) ... 으로 표시한다*/
+}
+
+</style>
+
+</head>
+<body>
+<h3>text-overflow</h3>
+<div>
+	엘리먼트가 잘리거나 부모 엘리먼트의 넓이와 높이가 내용을 다 보여줄 만큼 크지 않으면
+	엘리먼트가 잘리거나 부모 엘리먼트의 넓이와 높이가 내용을 다 보여줄 만큼 크지 않으면
+	엘리먼트가 잘리거나 부모 엘리먼트의 넓이와 높이가 내용을 다 보여줄 만큼 크지 않으면
+</div>
+</body>
+</html>

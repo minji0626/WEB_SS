@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to String</title>
+</head>
+<body>
+    <script>
+        //빈 객체 생성
+        const student = {};
+         document.write(student);
+         document.write('<br>');
+         document.write(student.toString() + '<br>');
+         document.write('-----------------<br>');
+
+         //객체에 속성 추가
+         student.이름 = '박문수';
+         student.취미 = '악기';
+         student.특기 = '프로그래밍';
+
+         //객체에 메소드 추가
+         student.toString = function(){
+            let msg = '';
+            for(let key in student) {
+                if(key != 'toString'){ // tostring 제외시키기
+                msg += key + ':' + student[key] + '<br>';
+            }
+        }
+            return msg;
+         }
+         document.write(student.toString() + '<br>');
+         document.write('-----------------<br>');
+         document.write(student);
+    </script>
+</body>
+</html>

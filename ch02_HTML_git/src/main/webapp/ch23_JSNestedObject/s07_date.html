@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <script>
+
+        //윈도우가 로드되면 대입한 함수가 실행
+        window.onload = function() {
+            //일정 시간마다 매개변수로 전달된 함수를 반복해서 실행
+            setInterval(function() {
+                const time = new Date();
+                let hours = time.getHours();
+                let minutes = time.getMinutes();
+                let seconds = time.getSeconds();
+                let clock = '';
+
+                clock += (hours < 10 ? '0' : '') + hours;
+                clock += (minutes < 10 ? ': 0' : ':')+ minutes;
+                clock += (seconds < 10 ? ': 0' : ':')+ seconds;
+
+                //id가 display인 태그에 접근해서 시,분,초를 표시
+                document.getElementById('display').innerHTML = clock;
+            } , 1000);
+        }
+    </script>
+</head>
+<body>
+    <span id ="display">
+
+    </span>
+</body>
+</html>

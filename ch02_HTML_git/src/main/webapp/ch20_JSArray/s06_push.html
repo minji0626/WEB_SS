@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메소드를 이용한 배열 요소의  삽입/삭제</title>
+</head>
+<body>
+    <script>
+    // push () : 배열 객체 마지막에 새 데이터를 삽업
+    // pop() : 배열에 저장된 데이터 중 마지막 인덱스에 저장된 데이터를 삭제
+    // shift(): 배열 객체에 저장된 데이터 중 첫 번째 인덱스에 지정된 데이터를 삭제
+    // unshift() : 배열 객체의 가장 앞의 인덱스에 새 데이터를 삽입
+
+        const array=[];
+        array.push(10,20,30); // 배열의 요소 삽입
+        //배열 요소의 목록 출력
+        document.write(array + '<br>');
+
+        array.push(40); //삽입
+        document.write(array + '<br>');
+
+        //배열의 시작에 새 값을 추가
+        array.unshift('melon'); //인덱스의 변동이 생김
+        document.write(array + '<br>');
+        document.write('----------------------<br>');
+
+        //배열의 마지막 요소 삭제
+        array.pop();
+        document.write(array + '<br>');
+
+        //배열의 시작에서 값 제거하기
+        array.shift();
+        document.write(array + '<br>');
+
+
+    </script>
+    
+</body>
+</html>
