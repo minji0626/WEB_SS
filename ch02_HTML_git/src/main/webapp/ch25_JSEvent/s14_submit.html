@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit</title>
+    <script>
+        window.onload = function() {
+            const form = document.getElementById('register_form');
+
+            //이벤트 연결
+            form.onsubmit = function()  {
+                const name = document.getElementById('name');
+                if(name.value.trim()==''){
+                    alert('이름을 입력하세요');
+                    name.value = '';
+                    name.focus();
+                    return false;
+                }
+
+                const id = document.getElementById('id');
+                if(id.value.trim() == ''){
+                    alert('ID를 입력하세요');
+                    id.value='';
+                    id.focus();
+                    return false;
+                }
+
+                const password = document.getElementById('password');
+                if(password.value.trim() == ''){
+                    alert('PW를 입력하세요');
+                    password.value='';
+                    password.focus();
+                    return false;
+                }
+
+                const zipcode = document.getElementById('zipcode');
+                if(zipcode.value.length != 5 || zipcode.value.trim()==''){
+                    alert('우편 번호는 자리를 꼭 입력하세요');
+                    zipcode.value ='';
+                    zipcode.focus();
+                    return false;
+                }
+
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <form action="a.jsp" method="post" id="register_form">
+        <fieldset>
+            <legend>회원가입</legend>
+            <ul>
+                <li>
+                    <label>이름</label>
+                    <input type="text" name="name" id="name" size="10" maxlength="10">
+                </li>
+                <li>
+                    <label for="name">ID</label>
+                    <input type="text" name="id" id="id" size="10" maxlength="10">
+                </li>
+                <li>
+                    <label>PW</label>
+                    <input type="password" name="password" id="password" size="10" maxlength="10">
+                </li>
+                <li>
+                    <label for="zipcode">우편 번호</label>
+                    <input type="text" name="zipcode" id="zipcode" size="5" maxlength="5">
+                </li>
+            </ul>
+            <div align="center">
+                <input type="submit" value="전송">
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>

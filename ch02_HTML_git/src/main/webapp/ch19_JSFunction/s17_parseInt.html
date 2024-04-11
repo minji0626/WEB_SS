@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>parseInt(),parseFloat()</title>
+</head>
+<body>
+<script type="text/javascript">
+	let num = '1234';
+	let won = '1000원';
+	let won2 = '원1000';
+	
+	document.write(Number(num) + '<br>');//string -> number
+	document.write(Number(won) + '<br>');//NaN
+	document.write(parseInt(num) + '<br>');
+	//앞의 숫자만 추출해서 형변환
+	document.write(parseInt(won) + '<br>');
+	//처음에 문자가 등장하면 형변환할 수 없음
+	document.write(parseInt(won2) + '<br>');
+	document.write('-----------------<br>');
+	
+	let num2 = '24.56';
+	let dollar = '1.5$';
+	let dollar2 = '$1.5';
+	
+	document.write(Number(num2) + '<br>');//string->number
+	document.write(Number(dollar) + '<br>');//NaN
+	document.write(parseFloat(num2) + '<br>');
+	document.write(parseFloat(dollar) + '<br>');
+	document.write(parseFloat(dollar2) + '<br>');//NaN
+	document.write('-----------------<br>');
+	
+	let no1 = '10';
+	let no2 = '3.67';
+	
+	//소수점 이하 절삭
+	document.write(parseInt(no2) + '<br>');
+	document.write(parseFloat(no1) + '<br>');
+</script>
+</body>
+</html>
+
+
+
+
+
+

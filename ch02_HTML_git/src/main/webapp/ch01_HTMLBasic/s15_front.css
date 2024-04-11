@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+        body {
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: Gowun Dodum;
+        }
+
+        header {
+            width: 100%;
+            height: 40px;
+            background-color: #feecef;
+            position: relative;
+        }
+
+        header button {
+            width: 250px;
+            height: 30px;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: none;
+            background-color: #feecef;
+            font-size: 13pt;
+            font-family: Gowun Dodum;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        #menubar, #footermenu ul{
+            list-style: none;
+            text-align: center;
+        }
+
+        #menubar li{
+            margin-right: 20px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        #menubar li a{
+            text-decoration: none;
+            color: #000;
+            align-content: center;
+            font-family: Gowun Dodum;
+            font-size: 10pt;
+            font-weight: bold;
+        }
+
+        #menubar img:hover{
+            transform: scale(1.05);
+        }
+
+        h3 {
+            font-size: 30pt;
+        }
+
+        .parent-searchbox {
+            text-align: center;
+        }
+        
+        .searchbox {
+            margin-top: 5px;
+            width: 600px;
+            margin: 0 auto; 
+        }
+        
+        .input-search {
+            text-align: center;
+            width: 100%;
+            font-size: 12pt;
+            font-weight: bold;
+            font-family: Gowun Dodum;
+            background-color: #f2f2f2;
+            border: none;
+            border-radius: 10px;
+            height: 30px;
+            color: #555555;
+        }
+        
+        .input-search:focus {
+            outline: 0;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+        }
+        
+
+        #container {
+            text-align: center; 
+        }
+        
+        #event1, #event2 {
+            display: inline-block; 
+            width: 750px;
+            height: 374px;
+            margin-left: 30px;
+            border: 3px solid #fdc0cc;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(5, 5, 5, 0.9);
+        }
+        
+        #event2 {
+            margin-left: 20px;
+        }
+        
+        #rec {
+            clear: both;
+        }
+
+        #rec h3 {
+            font-size: 20pt;
+            font-family: Gowun Dodum;
+            margin-left: 130px;
+        }
+
+        .product-table {
+            border: none;
+            margin-left: 90px;
+            width: 350px;
+            height: 500px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .product-table tr img {
+            width: 350px;
+            height: 400px;
+        }
+
+        .product-table tr img:hover{
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .product-table td.discount {
+            color: red;
+            font-weight: bolder;
+            font-size: 15pt;
+            display: inline;
+            margin-right: 5px;
+        }
+
+        .product-table td.price {
+            color: #000;
+            font-weight: bolder;
+            font-size: 15pt;
+            display: inline;
+            margin-right: 5px;
+        }
+
+        .product-table td.mallname{
+            opacity: 0.8;
+            font-weight: bold;
+        }
+
+        .product-table td.explain {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 350px; /* Adjust the maximum width as needed */
+            display: inline-block;
+        }
+    
+        #footermenu{
+            border-top: 3px solid rgba(0, 0, 0, 0.3);
+            border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+            height: 70px;
+        }
+
+        #footermenu li{
+            text-decoration: none;
+            color: #000;
+            font-family: Gowun Dodum;
+            font-size: 10pt;
+            font-weight: bolder;
+            margin-right: 130px;
+            display: inline-block;
+            text-align: center;
+            width: 70px;
+            height: 70px;
+
+        }
+        #footermenu li img{
+            width: 24px;
+            height: 24px;
+            align-content: center;
+        }
+
+        #footermenu li img:hover{
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        footer {
+            clear: both;
+            background-color: #feecef;
+            padding: 5px 0;
+            text-align: center; /* p 요소를 가운데 정렬하기 위해 */
+            font-weight: 800;
+        }
+        
+        footer p {
+            display: inline; /* p 요소를 인라인으로 표시하여 한 줄에 표시 */
+            font-family: Gowun Dodum;
+            
+        }
+        
+        footer #address {
+            display: inline; /* address 요소도 인라인으로 표시하여 한 줄에 표시 */
+            float: left; /* address 요소를 왼쪽에 위치시키기 위해 */
+            font-family: Gowun Dodum;
+        }
+        
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+    [실습]
+    음식점에서 국수를 주문하는데 할인 행사를 해서 한 그릇에 20% 할인해준다
+    국수값은 3500원이고 국수값과 주문할 수량을 입력해서 지불 금액을 출력하세요
+    [입력 예시]
+    국수값, 국수 수량 입력
+    [출력 예시]
+    지불 금액 : 14000원
+    */
+        var price = prompt('국수값을 입력해주세요.',''); //국수 값
+        var num = prompt('국수 수량을 입력해주세요.',''); // 국수 수량
+        var disprice = price * 0.8;                                 // 국수 한 그릇 할인 가격
+        var payment = disprice * num;                           // 지불해야 하는 금액
+
+        document.write('지불 금액 : ' + payment + '원');
+
+    </script>
+</body>
+</html>

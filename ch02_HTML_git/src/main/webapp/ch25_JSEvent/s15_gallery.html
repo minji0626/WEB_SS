@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #galleryWrap{
+            width: 520px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #galleryWrap img{
+            vertical-align: middle;
+        }
+        img#prev, img#next{
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            let num = 1;
+            let gallery = document.getElementById('gallery')
+            //이벤트 연결
+            document.getElementById('prev').onclick = function() {
+
+            };
+            document.getElementById('next').onclick = function() {
+                num++;
+                if(num> 7) num = 1;
+                gallery.src='../files/img'+num+'.jpg'; 
+            };
+        }
+    </script>
+</head>
+<body>
+    <div id="galleryWrap">
+        <h1>이미지 넘기기</h1>
+        <p>
+            <img src="../files/left_btn.png" id="prev" alt="이전 그림 보기">
+            <img src="../files/img1.jpg" id="gallery" alt="갤러리 그림">
+            <img src="../files/right_btn.png" id="next" alt="다음 그림 보기">
+        </p>
+    </div>
+</body>
+</html>

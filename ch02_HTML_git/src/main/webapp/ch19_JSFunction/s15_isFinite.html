@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>isFinite함수</title>
+</head>
+<body>
+<script type="text/javascript">
+	let number1 = 10 / 0;//Infinity
+	document.write('number1 = ' + number1 + '<br>');
+	let number2 = -10 / 0;//-Infinity
+	document.write('number2 = ' + number2 + '<br>');
+	
+	//isFinite함수를 이용해서 0으로 나누었는지 판단
+	if(isFinite(number2)){//0이 아닌 수로 나눈 경우
+		document.write('0이 아닌 수로 나눔');
+	}else{//0으로 나눈 경우
+		document.write('0으로 나눔');
+	}
+	
+</script>
+</body>
+</html>
+
+
+
+
+

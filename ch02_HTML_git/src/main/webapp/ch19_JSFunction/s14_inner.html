@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>내부함수</title>
+</head>
+<body>
+<script type="text/javascript">
+	function f(){
+		let n = 123;
+		//내부함수
+		function g(){
+			document.write('n = ' + n + '<br>');
+			document.write('g함수 호출');
+		}
+		return g; //내부함수 반환
+	}
+	//함수 호출
+	let m = f();
+	document.write(m + '<br>');
+	document.write('----------------<br>');
+	//반환된 내부함수 호출
+	//f함수가 종료되고 f함수의 지역변수 n은 소멸해야 하지만
+	//지역변수 n는 남겨둠으로써 내부함수가 호출될 때 값이 정상적으로
+	//출력될 수 있도록 처리해줌. 이렇게 지역변수가 남겨지고 지역변수를
+	//사용할 수 있는 현상을 클로저라고 부름
+	m();
+	
+</script>
+</body>
+</html>
+
+
+
+
+

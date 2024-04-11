@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건연산자(삼항연산자)</title>
+</head>
+<body>
+    <script>
+        var temp1 = 5 , temp2 = 10;
+        var max, min;
+
+        // 두 숫자의 크기를 비교하여 max와 min 변수에 저장한다
+
+        // 조건         ?       참일때 수행문   :   거짓일때 수행문
+        temp1 >= temp2 ? (max=temp1,min=temp2) : (max=temp2,min=temp1);
+
+        document.write('큰 값 = ' + max + '<br>');
+        document.write('작은 값 = ' + min + '<br>');
+    </script>
+</body>
+</html>
