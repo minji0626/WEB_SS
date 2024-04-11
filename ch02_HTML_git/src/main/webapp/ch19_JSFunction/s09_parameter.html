@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>나머지 매개변수</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+	나머지 매개변수는 매개변수를 정의할 때 정해지지 않은 매개변수들을 정의할 수 있게 함.
+	arguments 객체와 유사하나 arguments 객체는 함수에 전달되는 모든 전달
+	인자를 포함하는 반면에, 나머지 매개변수는 정해지지 않는 나머지를 의미함.
+	*/
+	function test1(...args){
+		document.write('args : ' + args + '<br>');
+	}
+	test1(10,20,30);
+	
+	function test2(a,b,...others){
+		document.write('a : ' + a + '<br>');
+		document.write('b : ' + b + '<br>');
+		document.write('others : ' + others + '<br>');
+	}
+	test2(10,20,30,40,50);
+	
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>테이블</title>
+</head>
+<body>
+	<h3>th,td 태그의 사용 및 속성 지정</h3>
+	<table border="1">
+		<tr>
+			<th width="100" background="../files/landscape.jpg">서울</th>
+			<th width="100"><img src="winter.jpg" width="100" height="100"></th>
+			<th width="100">광주</th>
+		</tr>
+
+		<tr>
+			<!-- align : 수평으로 정렬	-->
+			<td height="100" bgcolor="#f4edfc">왼쪽</td>
+			<td align="center">가운데</td>
+			<td align="right">오른쪽</td>
+		</tr>
+
+		<tr>
+			<td height="100" valign="top">상단</td>
+			<td valign="middle">중앙</td>
+			<td valign="bottom">하단</td>
+		</tr>
+	</table>
+
+	<h3>셀 합치기</h3>
+	<table border="1">
+		<tr>
+			<td width="100">1</td>
+			<td width="100" colspan="2">2,3</td> <!-- 같은 행 다른 열 합치기 , width가 100이기 때문에 5,6,8,9 칸은 50으로 나눠 가짐-->
+		</tr>
+
+		<tr>
+			<td rowspan="2">4,7</td> <!-- 다른 행 같은 열 합치기 -->
+			<td>5</td>
+			<td>6</td>
+		</tr>
+
+		<tr>
+			<td>8</td>
+			<td>9</td>
+		</tr>
+	</table>
+	
+	<h3>테이블 안에 테이블 넣기</h3>
+	<table border="1">
+	<tr>
+	<td>서울 여행</td>
+	</tr>
+	<tr>
+		<td>
+				<table border="1">
+					<tr>
+					<td width="100"> 기차 여행</td>
+					<td width="100"> 버스 여행</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

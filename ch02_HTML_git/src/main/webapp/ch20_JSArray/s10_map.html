@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        //map() : 값을 새롭게 정의한 후 새로운 배열을 만들어 반환
+        const array = [1,2,3,4,5,6,7,8,9,10];
+
+        //요소 * 요소 값이 저장된 배열 반환
+        const new_array = array.map(function(element,index,array){
+                        //계산식
+            return element * element; // 조건식이 들어왔다면 true, false가 반환될것임
+        });
+
+        document.write(new_array);
+    </script>
+</body>
+</html>

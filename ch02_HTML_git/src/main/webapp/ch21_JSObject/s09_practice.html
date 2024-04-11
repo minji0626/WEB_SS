@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습</title>
+</head>
+<body>
+    <script>
+        /*
+        [실습]
+        이름  |  수입  |  지출  |  세금(5%, getTax())  |  잔액(getBalance(), 세금 공제)
+        홍길동   3000   2500 
+        박문수   5000   1100
+        이순신   4000   3600
+        김유신   7000   4200         
+        */
+       //  배열  생성
+       const person = [];
+       person.push({이름 : '홍길동', 수입 : 3000, 지출 : 2500});
+       person.push({이름 : '박문수', 수입 : 5000, 지출 : 1100});
+       person.push({이름 : '이순신', 수입 : 4000, 지출 : 3600});
+       person.push({이름 : '김유신', 수입 : 7000, 지출 : 4200});
+
+        //person 배열 내의 모든 객체에 메소드를 추가시킨다
+        for (let i in person){
+            //세금 구하는 메소드 추가
+            person[i].getTax = function(){
+                return this.수입 * 0.05;
+            }
+            // 잔액 구하는 메소드 추가
+            person[i].getBalance = function() {
+                return this.수입 - this.지출 - this.getTax() ;
+            }
+        }
+        document.write('이름, 수입, 지출, 세금, 잔액 <br>');
+        for(let i in person){
+            document.write(
+                person[i].이름 + ',' +
+                person[i].수입 + ',' +
+                person[i].지출 + ',' +
+                person[i].getTax() + ',' +
+                person[i].getBalance()  + '<br>'
+            );
+        }
+
+
+    </script>
+</body>
+</html>

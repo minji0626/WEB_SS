@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            const bigImg = document.getElementById('bigImg');
+            const alink = document.getElementsByTagName('a');
+            for(let i = 0; i < alink.length; i++){
+                //이벤트 연결
+                alink[i].onmouseover = function(){
+                    bigImg.style.display = '';
+                    //이벤트가 발생한 a태그의 href 속성값 (이미지 경로) 반환
+                    bigImg.src = this.href;
+                    bigImg.width = 500;
+                    bigImg.height = 350;
+                };
+                alink[i].onmouseout = function(){
+                    bigImg.style.display='none'
+                };
+                alink[i].onclick = function()   {
+                    //a태그의 링크 기능 제거 
+                    return false;
+                }
+            }
+             
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <a href="../files/Penguins.jpg"><img src="../files/Penguins_small.jpg" width="83" height="83"></a>
+        <a href="../files/Koala.jpg"><img src="../files/Koala_small.jpg" width="83" height="83"></a>
+        <div>
+            <img id="bigImg" style="display: none ;">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교연산자</title>
+</head>
+<body>
+    <script>
+        // 연산자           설명
+        // x === y        x와 y의 값과 타입이 같으면 true
+        // x !== y         x와 y의 값 또는 타입이 다르면 true
+        var a = 20, b = '20', result;
+
+        result = a == b; //값만 비교
+        document.write('a == b : ' + result + '<br>');
+
+        result = a === b; //값, 타입 비교
+        document.write('a === b : ' + result + '<br>');
+
+        result = a!=b; //값만 비교
+        document.write('a != b : ' + result + '<br>');
+
+        result = a!==b; //값과 타입 비교
+        document.write('a !== b : ' + result + '<br>');
+
+        result = a > b;
+        document.write('a > b : ' + result + '<br>');
+
+        result = a < b;
+        document.write('a < b : ' + result + '<br>');
+    </script>
+</body>
+</html>

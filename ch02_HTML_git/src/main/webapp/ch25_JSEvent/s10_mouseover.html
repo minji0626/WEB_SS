@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>mouseover,mouseout</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        ul li{
+            background: #FF8888;
+            width: 110px;
+            height: 50px;
+            margin-bottom: 3px;
+        }
+        ul li a{
+            text-decoration: none;
+            color: #fff;
+            width: 110px;
+            height: 50px;
+            display: flex;
+            align-items: center; /*세로 정렬*/
+            justify-content: center; /* 가로 정렬*/
+
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            const menu = document.getElementsByTagName('li');
+            for(let i = 0; i < menu.length; i++){
+                //이벤트 연결
+                //커서를 태그에 올렸을 대 이벤트가 발생한다
+                menu[i].onmouseover = function(){
+                    //this : 이벤트가 발생한 태그
+                    this.style.backgroundColor = '#FF0000'; 
+                };
+                menu[i].onmouseout = function(){
+                    this.style.backgroundColor = '#FF8888'
+                };
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li><a href="#">Company</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Service </a></li>
+        <li><a href="#">Company</a></li>
+    </ul>
+</body>
+</html>

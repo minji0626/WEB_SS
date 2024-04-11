@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+</head>
+<body>
+    <script>
+        //filter() : 특정 조건을 만족하는 새로운 배열을 만들 때 사용
+        const array = [1,2,3,4,5,6,7,8,9,10];
+
+        //5이하의 데이터를 새로운 배열에 담아서 반환
+        const new_array = array.filter(function(element,index,array){
+                //조건
+            return element <= 5;
+        });
+
+        document.write(new_array);
+        
+    </script>
+</body>
+</html>

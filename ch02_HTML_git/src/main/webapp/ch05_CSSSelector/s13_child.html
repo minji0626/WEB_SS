@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>일반 구조 가상클래스 선택자</title>
+
+<style type="text/css">
+
+/*
+선택자 형태				설명
+:first-child			형제 관계 중에서 첫 번째 위치하는 태그를 선택
+:last-child			형제 관계 중에서 마지막에 위치하는 태그를 선택
+*/
+ul {
+	list-style: none; /* 아이콘 제거 */
+}
+li {
+	float : left; /* 왼쪽을 기준으로 수평으로 정렬 */
+	padding: 15px;
+	background-color: orange;
+}
+li:first-child {
+	border-radius: 10px 0 0 10px;
+}
+
+li:last-child {
+	border-radius: 0 10px 10px 0;
+}
+
+</style>
+
+</head>
+<body>
+	<ul>
+
+		<li>0</li>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+
+	</ul>
+
+</body>
+</html>
