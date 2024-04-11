@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그명을 통해서 문서 객체 탐색</title>
+    <script>
+        //윈도우가 로드될 때 onload에 대입된 함수가 실행
+        window.onload = function() {
+            //태그명을 통해서 태그를 탐색해서 문서 객체로 반환
+            //복수의 태그가 존재할 수 있기 때문에 배열로 반환
+            const header1 = document.getElementsByTagName('h1');
+            header1[0].innerHTML = '달빛이 찬란한 호수';
+            header1[1].innerHTML = '흰 눈이 눈 부신 들판';
+
+            const header3 = document.getElementsByTagName('h3');
+            for(let i = 0 ; i<header3.length; i++){
+                if(i%2 ==1){
+                    header3[i].innerHTML = '우주';
+                }else{
+                    header3[i].innerHTML = '지구';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>하늘</h1>
+    <h1>하늘</h1>
+
+    <hr size="1" width="90%">
+
+    <h3>구름</h3>
+    <h3>구름</h3>
+    <h3>구름</h3>
+</body>
+</html>

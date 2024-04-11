@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>font</title>
+<style type="text/css">
+/* font-family 속성의 사용 
+속성의 값으로는 구체적인 이름을 지정하며 
+만약 여러 개의 글자체를 지정하고자 할 때는 ,로 구분하여 글자체를 열거한다.
+
+명조체, 굴림체, 궁서체 등 구체적인 글씨체 이외에 다음 값을 사용하여 폰트의 종류를 값으로 지정
+
+값				설명
+serif			명조 계열 글자체
+sans=serif 	고딕 계열 글자체
+cursive		필기체
+fantasy 		장식이 되어 있는 글차제 (화려한 글꼴)
+monospace 글자 폭과 간격이 일정한 글꼴(고정폭 꼴)
+
+font-style 글자의 스타일 (기울기 등) 지정
+값			설명
+italic		이탤릭체
+oblique	이탤릭체
+
+font-weight 글자의 굵기 지정
+값 			설정
+bold		굵은 글씨
+
+font-variant
+값					설정
+small-caps		작은 대문자로 변환
+
+일괄 지정 font
+font : font-style 값
+		font-weight 값
+		font-variant 값
+		font-size 값 / line-height 값
+		font-family 값
+ex) .font (font : italic bold small-caps 30pt/50pt serif;)
+*/
+
+span{
+	font-size: 20pt;
+	font-family: serif;
+	font-style: oblique;
+}
+p {
+	font:italic bold small-caps 30pt/50pt serif;
+}
+
+</style>
+
+</head>
+<body>
+<span>Winter 겨울 같은 봄</span>
+<p>Happy Sunday</p>
+<div>Welcome! 환영합니다.</div>
+</body>
+</html>

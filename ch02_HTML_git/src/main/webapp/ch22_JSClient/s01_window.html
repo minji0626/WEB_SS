@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alert, prompt, confirm</title>
+</head>
+<body>
+    <script>
+        /*
+        클라이언트 오브젝트(브라우저 관련 객체)
+
+         window 메서드
+         window.alert() : 경고창
+         window.prompt() : 입력창
+         window.confirm(): 선택창
+        */
+       window.alert('경고창');  //= alert('경고창');
+
+        let season = window.prompt('좋아하는 계절은?',''); //= prompt('좋아하는 계절은?','');
+        document.write('좋아하는 계절은 ' + season +'이다.<br>');
+
+        let choice = window.confirm('야근을 하겠습니까?');  //=confirm('야근을 하겠습니까?');
+        //확인 true , 취소 false 반환 
+        if (choice){
+            document.write('야근 확정!');
+        }
+        else{
+            document.write('야근 취소');
+        }
+    </script>
+</body>
+</html>

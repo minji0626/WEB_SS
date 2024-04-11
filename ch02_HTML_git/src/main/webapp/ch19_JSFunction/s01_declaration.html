@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body>
+    <script>
+        //선언적 함수 (이름이 있는 함수)
+        //          함수명
+        function check() {
+            document.write('호출하면 동작함<br>');
+        }
+        //함수 호출
+        check();
+
+
+        function check2(msg) {
+            document.write(msg + '을 좋아합니다.<br>');
+        }
+        check2('가을');
+
+
+        function check3(num) {
+            return num * num;
+        }
+        //함수 호출
+        var number = check3(10);
+        document.write('number : ' + number + '<br>');
+
+        document.write('------익명 함수------<br>');
+
+        //익명 함수 (이름이 없는 함수)
+        var play = function () { 
+            document.write('운동을 좋아해요 <br>');
+        };
+        //함수 호출
+        play();
+
+        // 익명 함수 item 값 출력
+        var play2 = function (item) {
+            document.write(item + '을 좋아해요' +'<br>');
+        };
+        play2('배드민턴'); 
+
+        var play3 = function(x,y) {
+            return x + y;
+        }
+        var result = play3(5,8);
+        document.write('result = ' + result + '<br>');
+
+        document.write('-------인라인 방식------<br>');
+
+        //정의한 함수를 inline 방식으로 호출
+        function checkIt() {
+            alert('인라인 방식으로 함수 호출하기');
+        }
+    </script>
+    
+    <input type="button" value="확인" onclick="checkIt();">
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성</title>
+</head>
+<body>
+    <script>
+        //객체 생성
+        const product = {
+            //속성(key : value)
+            제품명 : '캐스피',
+            제품번호 : 'A1001',
+            기능 : 'Hi Speed',
+            원산지: '대한민국',
+            가격: 1000,
+            업데이트지원 : true
+        }
+
+        document.write(product.제품명);
+        document.write('<br>');
+        document.write(product.가격);
+        document.write('<br>');
+        document.write(product['업데이트지원']);
+        document.write('<br>');
+        document.write(product['기능']);
+        document.write('<br>----------<br>')
+        const country = {
+            '행정 수도' : '서울',
+            '인구수~' : 10000
+        };
+        document.write(country['행정 수도']);
+        document.write('<br>');
+        document.write(country['인구수~']);
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 사용시 주의사항</title>
+</head>
+<body>
+<script type="text/javascript">
+	//함수의 이름이 같을 경우 마지막 함수 호출
+	function 함수(){
+		document.write('함수 A<br>');
+	}
+	
+	function 함수(){
+		document.write('함수 B<br>');
+	}
+	
+	//함수 호출
+	함수();
+	
+	document.write('---------------<br>');
+	
+	//함수 호이스팅
+	함수2();
+	
+	function 함수2(){
+		document.write('함수2<br>');
+	}
+	
+	document.write('---------------<br>');
+	
+	//변수 선언은 중복될 수 있고 호출은 마지막 변수가 호출됨
+	var 함수3 = function(){
+		document.write('함수 C<br>');
+	};
+	
+	var 함수3 = function(){
+		document.write('함수 D<br>');
+	};
+	
+	//함수 호출
+	함수3();
+	
+	document.write('---------------<br>');
+	
+	//함수 호이스팅이 아니라 변수 호이스팅으로 인식
+	//함수처럼 호출하면 오류 발생
+	//함수4();
+	
+	var 함수4 = function(){
+		document.write('함수4');
+	};
+</script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>실행 위치</title>
+    <script type="text/javascript">
+        // 웹 브라우저는 head 태그를 먼저 읽은 후 body 태그를 읽으므로 
+        // script 태그를 head 태그에 넣으면  body 태그를 읽기 전에 실행한다. 
+        // 반대로 body 태그에 넣으면 head 태그에 script를 먼저 실행하고 body 태그의 script를 실행한다.
+        document.write("head에서 실행");
+    </script>
+</head>
+<body>
+    <script>
+        document.write("body에서 실행");
+    </script>
+</body>
+</html>

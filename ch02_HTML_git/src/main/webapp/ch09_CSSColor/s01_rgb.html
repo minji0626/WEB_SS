@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RGB, RGBA</title>
+
+<style type="text/css">
+div {
+	width: 300px;
+	height: 30px;
+}
+
+div.c1 {
+	background-color: rgb(150, 20, 20);
+}
+
+div.c2 {
+	background-color: rgb(250, 200, 25);
+}
+
+div.c3 {
+	background-color: rgb(25, 50, 200);
+}
+/* 알파(투명도) : 0.0 (완전 투명) ~ 1.0(완전 불투명)  */
+div.d1 {
+	background-color: rgba(222, 70, 10, 1.0);
+}
+
+div.d2 {
+	background-color: rgba(222, 70, 10, 0.8);
+}
+
+div.d3 {
+	background-color: rgba(222, 70, 10, 0.6);
+}
+
+div.d4 {
+	background-color: rgba(222, 70, 10, 0.4);
+}
+
+div.d5 {
+	background-color: rgba(222, 70, 10, 0.2);
+}
+
+/* 투명도 개별 명시, opacity로 표시 */
+div.e1 {
+	background-color: rgb(222, 70, 10);
+	opacity: 1.0;
+}
+
+div.e2 {
+	background-color: rgb(222, 70, 10);
+	opacity: 0.8;
+}
+
+div.e3 {
+	background-color: rgb(222, 70, 10);
+	opacity: 0.6;
+}
+
+div.e4 {
+	background-color: rgb(222, 70, 10);
+	opacity: 0.4;
+}
+
+div.e5 {
+	background-color: rgb(222, 70, 10);
+	opacity: 0.2;
+}
+</style>
+
+</head>
+<body>
+	<div class="c1"></div>
+	<div class="c2"></div>
+	<div class="c3"></div>
+
+	<br>
+	<div class="d1"></div>
+	<div class="d2"></div>
+	<div class="d3"></div>
+	<div class="d4"></div>
+	<div class="d5"></div>
+
+	<br>
+	<div class="e1"></div>
+	<div class="e2"></div>
+	<div class="e3"></div>
+	<div class="e4"></div>
+	<div class="e5"></div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form</title>
+</head>
+<body>
+	<h3>기본 폼</h3>
+	<!--
+서버에 데잍르런송할때는 form 태그 안에 하위 태긒 input, select, textarea 등을 명시하고 태그에 데이터를 입력해서 전송함.
+form  태그 밖에 명시한 태그에 입력한 데이터는 전송되지 않음
+ -->
+	<form action="a.jsp" method="get">
+		ID <input type="text" name="name" size="10" maxlength="15"> <br>
+		<br> PassWord <input type="password" name="password" size="10"><br>
+		<br> File Upload <input type="file" name="image"><br>
+		<br>
+		<!-- checkbox 복수 선택 -->
+		Season <br> <input type="checkbox" name="season" value="Spring">
+		Spring <input type="checkbox" name="season" value="Summer">
+		Summer <input type="checkbox" name="season" value="Fall"> Fall
+		<input type="checkbox" name="season" value="Winter"> Winter <br>
+		<br>
+		<!-- radio 단일 선택 -->
+		Country<br> <input type="radio" name="country" value="Korea">
+		Korea <input type="radio" name="country" value="England">
+		England <input type="radio" name="country" value="France">
+		France <input type="radio" name="country" value="Japan"> Japan
+		<br> <br>
+		<!-- select 단일 선택 -->
+		Region<br> <select name="region">
+			<option value="Seoul">Seoul</option>
+			<option value="Busan">Busan</option>
+			<option value="Gwangju">Gwangju</option>
+		</select> <br> <br>
+		<!-- 다중 선택 -->
+		Trip<br> <select name="trip" multiple="multiple">
+			<option value="France">France</option>
+			<option value="Swiss">Swiss</option>
+			<option value="Italy">Italy</option>
+			<option value="Spain">Spain</option>
+		</select> <br> <br> Job<br> <select name="Job">
+			<optgroup label="Professional">
+				<option value="Doctor">Doctor</option>
+				<option value="Programmer">Programmer</option>
+				<option value="Pet Trainer">Pet Trainer</option>
+			</optgroup>
+
+			<optgroup label="Sports">
+				<option value="Basketball">Basketball Player</option>
+				<option value="Soccer">Soccer Player</option>
+				<option value="Baseball">Baseball Player</option>
+			</optgroup>
+		</select> <br>
+		<br> Content<br>
+		<!-- textarea : 여러줄 입력 태그 -->
+		<textarea rows="5" cols="50" name="content"></textarea>
+		<br><br>
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
+	</form>
+</body>
+</html>
