@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열의 메소드 사용</title>
+</head>
+<body>
+    <script>
+    const array = ['파도', '하늘', '도시', '구름'];
+    //배열 요소의 목록 출력
+    document.write(array+'<br>');
+
+    //join() : 배열의 요소 전체를 쉼표 구분자로 반환
+    document.write('array.join() : ' + array.join() + '<br>');
+    // 구분자를  -로 변경시킴
+    document.write('array.join("-") : ' + array.join('-') + '<br>');
+
+    //slice() :  지정한 인덱스 범위의 데이터를 추출해서 배열로 반환
+    //지정한 인덱스부터 마지막 인덱스까지의 데이터를 추출해서 배열로 반환
+    document.write('array.slice(2) : ' + array.slice(2) + '<br>');
+    //시작 인덱스부터 끝 인덱스 전까지 
+    document.write('array.slice(1,3) : ' + array.slice(1,3) + '<br>');
+
+    //concat() : 전달한 인자를 이용해서 새로운 배열 생성 반환
+    // 문자열을 인자로 전달해서 새로운 배열 반환
+    document.write('array.concat("서울", "부산") : ' + array.concat('서울' , '부산',) + '<br>');
+    // 배열을 인자로 전달해서 새로운 배열 반환
+    document.write('array.concat( ["한국" , "미국] ) : ' + array.concat( ['한국' , '미국'] )+'<br>');
+
+</script>
+</body>
+</html>

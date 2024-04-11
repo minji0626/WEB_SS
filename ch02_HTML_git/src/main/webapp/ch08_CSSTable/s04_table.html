@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Table에 스타일 추가</title>
+
+<style type="text/css">
+table {
+	border: solid 1px orange; /* 테두리 */
+	/* 기본적으로 테두리는 두 줄이다. border - collapse : collapse */
+	border-collapse: collapse;
+	width: 500px; /* 넓이 부여 */
+	/* 
+	중앙 정렬할 때
+	테이불에 margin (태그 밖 여백을 의미함) 을 상하 0px , 좌우 auto;
+	수평 방향으로 남은 여백을 좌우에 동등하게 분배함
+	*/
+	margin: 0 auto;
+	/* 제목 위치 지정 */
+	caption-side: bottom;
+}
+
+th {
+	border: solid 1px orange;
+	background-color: #FC6;
+	color: #fff;
+	/* 태그 안 쪽 여백 */
+	padding: 5px;
+}
+
+td {
+	height: 100px;
+	border: solid 1px orange;
+	/* 가로 방향 정렬 */
+	text-align: center;
+	/* 세로 방향 정렬 */
+	vertical-align: top;
+}
+
+tr.bg td{
+	color: #000;
+	background-color: #EAF3D3;
+	vertical-align: bottom;
+}
+caption {
+	color: #f60;
+	font-size: 11pt;
+	font-weight: bold;
+	margin-top: 5px;
+}
+</style>
+</head>
+<body>
+
+	<table>
+		<caption>table에 스타일 추가</caption>
+		<tr>
+			<th>도시</th>
+			<th>계절</th>
+			<th>나라</th>
+		</tr>
+		<tr>
+			<td>서울</td>
+			<td>봄</td>
+			<td>대한민국</td>
+		</tr>
+		<tr class="bg">
+			<td>런던</td>
+			<td>여름</td>
+			<td>영국</td>
+		</tr>
+	</table>
+
+</body>
+</html>

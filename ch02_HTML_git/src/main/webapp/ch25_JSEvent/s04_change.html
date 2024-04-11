@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function trans() {
+            let x =document.getElementById('word');
+            //input의 데이터를 읽어서 대문자로 변환 후 다시
+            //input 태그의 value에 저장 
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+</head>
+<body>
+    영어 단어: <input type="text" id="word" onchange="trans()">
+    <p>입력 필드를 벗어나면 대문자로 변경됩니다.</p>
+</body>
+</html>

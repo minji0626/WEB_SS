@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이메일 체크</title>
+</head>
+<body>
+    <script>
+        function check() {
+            //입력한 이메일 값 읽기
+            let email = document.form1.email.value;
+            let n = email.indexOf('@');
+            alert(n);
+            if(n > 0){                              // 시작 인덱스, 추출할 문자 개수
+                document.form1.id.value = email.substr(0,n);
+            }else{
+                document.form1.email.value = ''; //값 초기화
+                alert('이메일 형식에 부합하지 않습니다. 다시 입력해주세요.');
+            }
+        }
+    </script>
+
+    <form name="form1">
+        ID : <input type="text" name="id" placeholder="아이디는 이메일에서 추출" readonly="readonly"><br><br>
+        Email : <input type="text" name="email"><br><br>
+        <input type="button" value="입력" onclick="check()">
+    </form>
+
+</body>
+</html>

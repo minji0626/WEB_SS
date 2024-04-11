@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+<script>
+    function check() {
+        let korean = document.myForm.korean.value;
+        let english = document.myForm.english.value;
+        let math = document.myForm.math.value;
+ 
+        //총점 구하기
+        let sum = Number(korean) + Number(english) + Number(math);
+        //평균 구하기
+        let average= sum / 3;
+
+        alert('총점 = ' + sum + ', 평균 = ' + average);
+    }
+</script>
+</head>
+<body>
+    <form name="myForm">
+        국어 : <input type="text" name="korean"><br>
+        영어 : <input type="text" name="english"><br>
+        수학 : <input type="text" name="math"><br>
+        <input type="button" value="등록" onclick="check()">
+    </form>
+</body>
+</html>

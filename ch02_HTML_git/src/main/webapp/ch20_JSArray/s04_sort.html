@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 요소의 정렬</title>
+</head>
+<body>
+    <script>
+        const array = ['가', '하', '아', '나'];
+        //배열 요소의 목록
+        document.write(array + '<br>');
+
+        array.sort(); //오름차순 정렬
+        document.write(array + '<br>');
+
+        array.reverse(); //반대로 정렬
+        document.write(array + '<br>');
+        document.write('-----------<br>');
+
+        const array2 = [52,273,102,32];
+        document.write(array2 + '<br>');
+
+        //오름차순 정렬
+        //array2.sort(); //숫자의 배열인데 문자열로 인식하여 앞자리로만 정렬
+        //익명 함수
+        array2.sort(function(left, right) { 
+        //함수를 이용해 연산을 시키면 숫자로 인식하기 때문에 정렬이 가능함
+            return left - right;
+        });
+        document.write(array2 + '<br>');
+
+
+        array2.sort(function(left,right) {
+        // 내림차순 정렬, 오름차순의 식의 반대로
+            return right - left;
+        });
+        document.write(array2 + '<br>');
+
+    </script>
+</body>
+</html>

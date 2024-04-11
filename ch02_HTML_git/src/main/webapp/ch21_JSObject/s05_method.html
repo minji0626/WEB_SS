@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method</title>
+</head>
+<body>
+    <script>
+        //ES6부터 function키워드를 생략한 축약 표현을 사용 가능
+        //객체 생성
+        const obj = {
+            //속성 지정
+            name : 'Peter',
+            play:function() {
+                document.write('열심히 일하다');
+            },
+            //메소드 축약 표현
+            sayHi(){
+                document.write('Hi! ' + this.name);
+            }
+        };
+        obj.sayHi();
+    </script>
+</body>
+</html>

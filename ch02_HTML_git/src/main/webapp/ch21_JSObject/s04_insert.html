@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빈 객체에 속성 추가</title>
+</head>
+<body>
+    <script>
+        const student = { };
+
+        //객체에 속성 추가
+        student.이름 = '홍길동'
+        student.취미 = '악기';
+        student.특기 = '프로그래밍';
+        student.장래희망 = '프로그래머';
+
+        //in 키워드를 이용해서 객체 내의 속성 존재 여부를 체크
+        document.write(('특기' in student) + '<br>');
+        document.write(student.이름 + '<br>');
+        document.write(student.취미 + '<br>');
+        document.write('-----------------<br>');
+
+        //객체에 메서드 추가
+        student.play = function() {
+            document.write('피아노를 연주하다');
+        };
+        //생성한 메서드 호출
+        student.play();
+        document.write('<br>-----------------<br>');
+
+        //for in 반복문을 이용해서 객체의 속성과 메서드 출력
+        for (let key in student) {
+            document.write(key + ':' + student[key] + '<br>');
+        }
+    </script>
+</body>
+</html>
