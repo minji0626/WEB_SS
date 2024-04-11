@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector</title>
+    <script>
+        window.onload = function() {
+            //명시한 선택자를 통해 해당 선택자를 사용하는 태그를 반환
+                                                                    //CSS 선택자
+            let header1 = document.querySelector('#header_1');
+            let header2 = document.querySelector('#header_2');
+
+            header1.innerHTML = '서울';
+            header2.innerHTML = '부산';
+
+            let input1 = document.querySelector('#my_form #input_1');
+            input1.value = '홍길동';
+
+            //CSS 선택자를 명시하면 여러개의 태그를 반환하는 상황에서도
+            //QuerySelector는 같은 태그의 최상단의 태그만 접근 가능하다.
+            let element = document.querySelector('li');
+            element.style.backgroundColor = 'yellow';
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1 id="header_1">Header</h1>
+    <h1 id="header_2">Header</h1>
+
+    <form id="my_form">
+        <input type="text" id="input_1">
+    </form>
+
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+    </ul>
+
+</body>
+
+</html>

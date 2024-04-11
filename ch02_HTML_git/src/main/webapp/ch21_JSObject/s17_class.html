@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+<body>
+    <script>
+        //클래스 정의
+        class Person{
+            //생성자
+            constructor(name){
+                //속성 정의
+                //instance property
+                this.name = name;
+            }
+            //메서드
+            sayHi() {
+                document.write('Hi My name is ' + this.name);
+                
+            }
+            
+        }
+        //객체 생성
+        const me = new Person ('Annie');
+        //속성 호출
+        document.write(me.name);
+        document.write('<br>');
+        //메서드 호출
+        me.sayHi();
+        document.write('<br>');
+        //정적 메서드 호출
+        Person.sayHello();
+    </script>
+</body>
+</html>

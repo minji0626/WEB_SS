@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelectorALL</title>
+</head>
+<body>
+    <ul>
+        <li>사과</li>
+        <li>바나나</li>
+        <li>오렌지</li>
+    </ul>
+    <script>
+        //ul  요소의 자식 요소인 li 요소를 모두 탐색하여 배열로 반환
+                                                                // 자식선택자
+        const elems = document.querySelectorAll('ul > li');
+
+        for(let i = 0; i<elems.length; i++){
+            document.write(elems[i].innerHTML + '<br>');
+        }
+        document.write('-------------<br>');
+
+        elems.forEach(function(element) {
+            element.style.color = 'blue';
+        });
+    </script>
+</body>
+</html>

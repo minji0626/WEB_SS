@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그 생성</title>
+    <script>
+        /*
+        메소드 이름                             설명
+        createElement(tagName)      요소 노드를 생성
+        createTextNode(text)            텍스트 노드를 생성
+        appendChild(node)               객체에 노드를 연결
+        */
+        window.onload=function(){
+            const header = document.createElement('h1'); //h1 태그 생성
+            const textNode = document.createTextNode('Hello DOM'); //text 생성
+
+            //노드 연결
+            header.appendChild(textNode); //h1 태그에 텍스트를 추가
+            document.body.appendChild(header); //body에 h1 추가
+        };
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

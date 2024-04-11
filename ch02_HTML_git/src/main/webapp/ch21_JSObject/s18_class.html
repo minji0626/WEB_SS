@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+<body>
+    <script>
+        //부모 클래스 정의
+        class Animal{
+            //생성자
+            constructor(age, weight){
+                this.age = age;
+                this.weight = weight;
+            };
+            //메소드 정의
+            eat() {
+                return "eat";
+            }
+            move(){
+                return"move";
+            }
+        }
+        //자식 클래스 정의 (부모 클래스를 자식 클래스에 상속)
+        class Bird extends Animal{
+            fly(){
+                return 'fly';
+            }
+        }
+        //자식 클래스 객체 생성
+        const bird = new Bird(1,5);
+
+        document.write(bird.age + '<br>');
+        document.write(bird.weight + '<br>')
+        document.write(bird.eat()+ '<br>')
+        document.write(bird.move()+ '<br>')
+        document.write(bird.fly()+ '<br>')
+    </script>
+</body>
+</html>
