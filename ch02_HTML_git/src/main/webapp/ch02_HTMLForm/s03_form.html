@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form</title>
+</head>
+<body>
+	<form action="signup.jsp"></form>
+	<fieldset>
+		<legend>Sign Up</legend>
+		<ul>
+			<li>
+				<label for="name">Name</label> 
+				<input type="text" name="name" id="name" placeholder="Enter your name.">
+			</li>
+			
+			<li>
+				<label for="id">ID</label>
+				<!-- autocomplete : 자동 완성 -->
+				<input type="text" name="id" id="id" placeholder="Enter your ID" autocomplete="off">
+			</li>
+			
+			<li>
+				<label for="password">PW</label>
+				<input type="password" name="password" id="password" placeholder="Enter your PassWord">
+			</li>
+			
+			<li>
+				<label for="job">Job</label>
+				<input type="text" name="job" list="job">
+				<datalist id="job">
+						<option value="학생">
+						<option value="의사">
+						<option value="경찰">
+						<option value="프로그래머">
+				</datalist>
+			</li>
+			
+			<li>
+				<input type="submit" value="Sign Up">
+			</li>
+			
+		</ul>
+	</fieldset>
+</body>
+</html>

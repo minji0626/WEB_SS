@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>open, close</title>
+</head>
+<body>
+    <script>
+        /*
+        window.open(url, 새 창 이름, option) : 창 열기
+        Option
+        width : 새 윈도우의 넓이
+        height : 새 윈도우의 높이
+        location : 주소 입력창 유무
+        menubar : 메뉴의 유무
+        resizable : 화면 크기 조절 가능 여부
+        status : 상태 표시줄의 유무
+        toolbar : 툴바 유무
+        scrollbars : 스크롤바 유무
+        left : 창의 가로축 위치 지정
+        top : 창의 세로축 위치 지정 
+
+        window.close() : 창 닫기
+        */
+
+        let win;
+        function winOpen() {
+            //새 창 만들기
+            win = window.open('https://www.naver.com','child',
+            'toolbar=no, location=no, status=no, menubar = no, resizale=no, scrollbars=no, width=400, height=300');
+        }
+        function winClose(){
+            //새로 열린 창 닫기
+            win.close();
+        }
+    </script>
+    <input type="button" value="새 창" onclick="winOpen();">
+    <input type="button" value="창 닫기" onclick="winClose();">
+    
+</body>
+</html>

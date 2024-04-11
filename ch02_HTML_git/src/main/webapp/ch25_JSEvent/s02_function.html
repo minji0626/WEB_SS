@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인 이벤트 처리 - 함수 이용</title>
+    <style>
+        div#header{
+            background-color: orange;
+        }
+    </style>
+    <script>
+        function whenClick() {
+            alert('CLICK');
+        }
+    </script>
+</head>
+<body>
+    <div id="header" onclick="whenClick()">클릭</div>
+</body>
+</html>
