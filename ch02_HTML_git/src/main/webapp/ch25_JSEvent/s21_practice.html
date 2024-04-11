@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식 주문</title>
+    <style>
+        h2 {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        div#order {
+            margin: 0 auto;
+            width: 820px;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 1px solid paleturquoise;
+            margin: 40px auto;
+        }
+
+        td {
+            height: 30px;
+            border: 1px solid paleturquoise;
+        }
+
+        td.title {
+            text-align: center;
+            background-color: beige;
+            font-weight: bold;
+            color: plum;
+            padding: 0 10px;
+        }
+
+        input[type="number"] {
+            text-align: center;
+            width: 50px;
+            height: 19px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0 10px;
+            margin: 5px;
+        }
+
+        ul li {
+            display: inline;
+
+        }
+
+        #totalMoney {
+            text-align: center;
+            border-style: hidden;
+            font-size: 15pt;
+            font-weight: bold;
+            color: maroon;
+        }
+    </style>
+
+    <script>
+        // 페이지가 로드되면 실행될 함수
+        window.onload = function () {
+            // 음식의 가격 정보가 저장된 객체 생성
+            const foodPrice = {
+                c0: 4000,
+                c1: 5000,
+                c2: 6000
+            };
+
+            // 총 음식 주문 가격 
+            let sum = 0;
+
+            // 체크박스 요소들과 수량 입력 요소들을 선택
+            const checkboxes = document.querySelectorAll('input[type=checkbox]');
+            const quantities = document.querySelectorAll('input[type=number]');
+            const totalMoney = document.getElementById('totalMoney');
+
+            // 각 체크박스에 이벤트 리스너 추가
+            checkboxes.forEach((checkbox, i) => {
+                checkbox.addEventListener('change', function () {
+                    updateTotal();
+                });
+            });
+
+            // 수량 입력 요소에도 이벤트 리스너 추가 (실시간 업데이트)
+            quantities.forEach((input, i) => {
+                input.addEventListener('input', function () {
+                    updateTotal();
+                });
+            });
+
+            // 총 주문 가격 업데이트 함수
+            function updateTotal() {
+                sum = 0; // 기존 값 초기화
+                checkboxes.forEach((checkbox, i) => {
+                    if (checkbox.checked) {
+                        const quantity = parseInt(quantities[i].value) || 0;
+                        const price = foodPrice[checkbox.id] || 0;
+                        sum += price * quantity;
+                    }
+                });
+                // 총 주문 가격을 화면에 표시
+                totalMoney.value = sum.toLocaleString();
+            }
+
+            // 페이지 로드 시 초기화
+            updateTotal();
+        };
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <h2>계산서</h2>
+    <form action="a.jsp" method="post" id="form">
+        <table>
+            <tr>
+                <td class="title">식사류</td>
+                <td>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="c0" name="foodName" value="짜장면" class="order-item">
+                            <label for="c0">짜장면&emsp;4,000원</label>
+                            <input type="number" name="foodOrderCnt" id="num_c0" min="0" max="99" value="0"
+                                class="order-item">
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c1" name="foodName" value="짬뽕" class="order-item">
+                            <label for="c1">짬뽕&emsp;5,000원</label>
+                            <input type="number" name="foodOrderCnt" id="num_c1" min="0" max="99" value="0"
+                                class="order-item">
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c2" name="foodName" value="볶음밥" class="order-item">
+                            <label for="c2">볶음밥&emsp;6,000원</label>
+                            <input type="number" name="foodOrderCnt" id="num_c2" min="0" max="99" value="0"
+                                class="order-item">
+                        </li>
+
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="title">청구 금액</td>
+                <td><input type="text" id="totalMoney" name="totalMoney" size="15" value="0" readonly="readonly">원</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="주문">
+                    <input type="reset" value="취소">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

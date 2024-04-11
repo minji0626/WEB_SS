@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습</title>
+    <script>
+        /*
+        [실습] 
+        국어, 영어, 수학을 입력 받아서 총점, 평균을 구하여 출력
+        [유효성 체크]
+        1. 국어, 영어, 수학 필수 입력
+        2. 숫자만 입력
+        3. 0~ 100 사이만 입력
+
+        [출력]
+        국어, 영어, 수학, 총점, 평균  출력
+        */
+        window.onload = function () {
+            const button = document.getElementById('confirm_btn');
+            button.onclick = function () {
+                const korean = document.getElementById('korean');
+                if (isNaN(korean.value)) {
+                    alert('숫자만 입력 가능합니다.');
+                    korean.value = '';
+                    korean.focus();
+                    return false;
+                } else if (korean.value < 0 || korean.value > 100) {
+                    alert('0 ~ 100 사이의 숫자만 입력해주세요');
+                    korean.value = '';
+                    korean.focus();
+                    return false;
+                } else if (korean.value.trim() == '') {
+                    alert('국어 점수를 입력해주세요.');
+                    korean.value = '';
+                    korean.focus();
+                    return false;
+                } 
+
+
+                const english = document.getElementById('english');
+                if (isNaN(english.value)) {
+                    alert('숫자만 입력 가능합니다.');
+                    english.value = '';
+                    english.focus();
+                    return false;
+                } else if (english.value < 0 || english.value > 100) {
+                    alert('0 ~ 100 사이의 숫자만 입력해주세요');
+                    english.value = '';
+                    english.focus();
+                    return false;
+                } else if (english.value.trim() == '') {
+                    alert('영어 점수를 입력해주세요.');
+                    english.value = '';
+                    english.focus();
+                    return false;
+                }
+                const math = document.getElementById('math');
+                if (isNaN(math.value)) {
+                    alert('숫자만 입력 가능합니다.');
+                    math.value = '';
+                    math.focus();
+                    return false;
+                } else if (math.value < 0 || math.value > 100) {
+                    alert('0 ~ 100 사이의 숫자만 입력해주세요');
+                    math.value = '';
+                    math.focus();
+                    return false;
+                } else if (math.value.trim() == '') {
+                    alert('수학 점수를 입력해주세요.');
+                    math.value = '';
+                    math.focus();
+                    return false;
+                }
+
+                const sum = Number(korean.value) + Number(english.value) + Number(math.value);
+                const avg = sum / 3;
+
+                alert('국어 : ' + korean.value + '\n' + '영어 : ' + english.value +'\n' + '수학 : ' + math.value  + '\n' + '총점 : ' + sum + '\n' +'평균 : ' + avg );
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form id="form">
+        국어 <input type="text" name="korean" id="korean"><br>
+        영어 <input type="text" name="english" id="english"><br>
+        수학 <input type="text" name="math" id="math"><br>
+        <input type="button" value="확인" id="confirm_btn">
+        <div id="result"></div>
+    </form>
+</body>
+
+</html>
