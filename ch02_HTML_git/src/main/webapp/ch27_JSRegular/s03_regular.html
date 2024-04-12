@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정규표현식</title>
+    <script>
+        window.onload = function () {
+            const form = document.getElementById('register_form');
+            form.onsubmit = function () {
+                const id = document.getElementById('id');
+                /*
+                /패턴/ -> / (시작) 패턴 / (끝)
+                ^ 패턴의 시작
+                [] '[' 와 ']' 사이의 문자들과 매치라는 의미.
+                ex)[A-Za-z0-9] -> A~Z , a~z, 0~9 사용을 의미한다
+                {4,12} - > 반복 횟수가 4부터 시작하여 12까지 반복할 수 있다.
+                $ 패턴의 끝
+                */
+                if(!/^[A-Za-z0-9]{4,12}$/.test(id.value)){
+                    alert('영문 또는 숫자 사용, 최소 4자 ~ 최대 12자를 사용하세요.');
+                    id.value = '';
+                    id.focus();
+                    return false;
+                }
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <h3>정규표현식</h3>
+    <form action="a.jsp" id="register_form" method="post">
+        <ul>
+            <li>
+                <label for="id">아이디</label>
+                <input type="text" name="id" id="id">
+                (영문 또는 숫자 사용, 최소 4자 ~ 최대 12자)
+            </li>
+        </ul>
+        <div>
+            <input type="submit" value="전송">
+        </div>
+    </form>
+</body>
+
+</html>
