@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>file</title>
+<script type="text/javascript">
+window.onload=function(){
+	//파일을 선택할 때 
+	document.getElementById('file').onchange=function(){
+		//선택한 파일의 file 객체 반환
+		//input type="file" 태그에서 multiple="multiple" 속성을
+		//명시하면 복수의 파일을 선택할 수 있고 그 정보는 배열에 저장됨.
+		//따라서 하나의 파일을 선택해도 배열에 저장됨.
+		const file = this.files[0];
+		//선택한 파일의 이름 출력
+		alert(file.name + '을 선택했습니다.');
+	};
+	
+	//읽기 버튼을 클릭할 때
+	document.getElementById('btnStart').onclick=function(){
+		readProcess();
+	};
+	
+};
+
+function readProcess(){
+	//선택한 파일에 대한 정보 읽기, file 객체 반환
+	const file = document.getElementById('file').files[0];
+	
+	if(!file){//if(file == undefined)
+		alert('파일을 선택하세요!');
+		return;
+	}
+	
+	document.getElementById('filename').textContent = file.name;
+	document.getElementById('filesize').textContent = '(' + file.size + 'bytes)';
+	document.getElementById('filetype').textContent = file.type;
+	document.getElementById('filedate').textContent = file.lastModifiedDate.toLocaleString();
+	
+	//select 태그 객체 반환
+	const encodeList = document.getElementById('encoding');
+	//선택한 인코딩 정보 반환
+	let encoding = encodeList.value;
+	
+	const reader = new FileReader();//파일 읽기 기능 제공
+	reader.readAsText(file,encoding);//선택한 파일을 읽어서 문자열로 저장
+	//파일의 내용을 모두 읽어들이면 onload 속성에서 대입된 함수가 호출됨
+	reader.onload=function(){
+		const contents = document.getElementById('contents');
+		contents.value = reader.result;//읽어들인 내용 반환
+	};
+	reader.onerror=function(){
+		alert('파일 읽기 중 오류 발생');
+	};
+	
+	
+}
+
+</script>
+</head>
+<body>
+<h2>현재 시스템의 파일 읽기</h2>
+<input type="file" id="file" accept="text/*">
+<select id="encoding">
+	<option>EUC-KR</option>
+	<option>UTF-8</option>
+</select>
+<button id="btnStart">읽기</button>
+<div>
+	<span id="filename">파일명</span>
+	<span id="filesize">파일크기</span>
+	<span id="filetype">파일타입</span>
+	<span id="filedate">파일의 마지막 갱신 일시</span>
+</div>
+<textarea id="contents" rows="10" cols="50" readonly="readonly"></textarea>
+</body>
+</html>
