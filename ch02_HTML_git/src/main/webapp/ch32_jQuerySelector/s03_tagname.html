@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 선택자 - 태그 선택자, 클래스 선택자, id 선택자</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    // 문서가 준비 완료되면 매개 변수로 전달된 함수를 실행
+    $(document).ready(function(){
+        //태그 선택자
+                    //속성      속성값 
+        $('span').css('border','3px solid blue');
+        // 클래스 선택자
+        $('.my').css('border','5px solid red');
+        // ID 선택자
+        $('#content').css('background-color','pink');
+    });
+    </script>
+</head>
+<body>
+    <p class="my">jQuery 연습</p>
+    <div>
+        <div id="content">id값이 content인 div tag</div>
+    </div>
+    <span>span1</span>
+    <span class="my">span2</span>
+</body>
+</html>
