@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캔버스 연습</title>
+    <script>
+        window.onload = function () {
+            const canvas = document.getElementById('canvas');
+            if (canvas.getContext) {
+                const context = canvas.getContext('2d');
+
+                //색상 지정 - rgb 색상
+                context.fillStyle = 'rgb(200,0,0)';
+                context.fillRect(10,10,100,100);
+
+                //색상 지정 - 16진수 색상 코드
+                context.fillStyle = '#0c30c3';
+                context.fillRect(50,50,100,100);
+
+                context.beginPath(); // 완전한 원일 경우에는 생략이 가능하다
+                context.arc(250,90,80,0,(Math.PI*2),true);
+                context.closePath(); // 완전한 원일 경우에는 생략이 가능하다
+                context.fillStyle = 'yellow';
+                context.strokeStyle = 'blue';
+                context.fill();
+                context.stroke();
+            }
+
+            else {
+                alert('브라우저가 캔버스를 지원하지 않습니다.')
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="300">
+    </canvas>
+</body>
+
+</html>

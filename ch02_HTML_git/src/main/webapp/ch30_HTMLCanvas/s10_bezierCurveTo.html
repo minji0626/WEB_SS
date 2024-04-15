@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캔버스 연습</title>
+    <script>
+        window.onload = function () {
+            const canvas = document.getElementById('canvas');
+            if (canvas.getContext) {
+                const context = canvas.getContext('2d');
+                /*
+                bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y) : 두 개의 조절점
+                즉 (cp1x,cp1y)와 (cp2x,cp2y)를 이용해서 (x,y)까지의 곡선을 그림
+                */
+               context.beginPath();
+               //시작점을 (50,200)
+               context.moveTo(50,200);
+               //조절점 두 개를 사용하여 곡선을 그림
+               context.bezierCurveTo(90,50,310,50,350,200);
+               context.stroke();
+
+            }
+            else {
+                alert('브라우저가 캔버스를 지원하지 않습니다.')
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="300"></canvas>
+    <br><br>
+    <img src="../files/exp_02.gif">
+</body>
+
+</html>

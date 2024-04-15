@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캔버스 연습</title>
+    <script>
+        window.onload = function () {
+            const canvas = document.getElementById('canvas');
+            if (canvas.getContext) {
+                const context = canvas.getContext('2d');
+                /*
+                arc메서드에서의 각도는 도(degree)로 표기하지 않고 라디안 값으로 표기함
+                표시 1라디안은 180/Math.PI, , 60도 (Math.PI / 180) * 60,
+                360도 (Math.PI * 2)
+                                    1.5 파이 (270도)
+                                        |
+                                        |
+                                        |
+                1파이(180도)--------- 중심점 --------- 0파이, 2파이(0도, 360도)
+                                        |
+                                        |
+                                        |
+                                    0.5 파이 (90도)
+                 
+                x,y 위치에서 시작해서 반시계방향(anticlockwise)으로 반지름(r)만큼의 원을 그린다.
+                startAngle 과 endAngle 매개변수는 호의 시작점과 끝 점을 의미한다.
+                */
+
+                // 첫 번째 원
+                // (70,70)에서 반시계방향으로 반지름 20px인 원을 그리는데, 60도까지만 그리고 테두리만 표시한다.
+                context.beginPath();
+                //x,y,r(반지름), 시작각도, 끝 각도, 반시계방향 지정 
+                context.arc(70, 70, 20, 0, (Math.PI / 180) * 60, true);
+                context.stroke();
+
+                // 두 번째 원
+                // (130,110)에서 반시계 방향으로 반지름 50인원을 그리고 색을 채운다.
+                // 끝 각도는 360도로 한다.
+                context.beginPath();
+                context.arc(130, 110, 50, 0, (Math.PI * 2), true);
+                context.closePath();
+                context.fillStyle = 'rgb(0,200,200)';
+                context.fill();
+                context.stroke();
+
+                //세 번째 원
+                // (190,70)에서 반시계방향으로 반지름 20인 원을 그리는데, 110도에서 170도까지 그리고, 테두리만 표시
+                context.beginPath();
+                context.arc(190, 70, 20, (Math.PI / 180) * 110, (Math.PI / 180) * 170, true);
+                context.stroke();
+
+            }
+
+            else {
+                alert('브라우저가 캔버스를 지원하지 않습니다.')
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="300">
+    </canvas>
+</body>
+
+</html>

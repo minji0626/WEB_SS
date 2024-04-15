@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캔버스 연습</title>
+    <script>
+        window.onload = function () {
+            const canvas = document.getElementById('canvas');
+            if (canvas.getContext) {
+                const context = canvas.getContext('2d');
+
+                //객체로부터 그림자가 x축 방향으로 얼마나 떨어져 있는가를 나타냄
+                //기본값은 0이며, 음수이면 왼쪽에 그림자가 생김
+                context.shadowOffsetX = 10;
+
+                //객체로부터 그림자가 y축 방향으로 얼마나 떨어져 있는가를 나타냄.
+                // 기본값은 0이며, 음수이면 위쪽에 그림자가 생김
+                context.shadowOffsetY = 10;
+
+                //그림자가 얼마나 흐릿한가를 나타냄 기본값은 0
+                context.shadowBlur = 25;
+
+                //그림자 색상을 지정하는데 기본값은 검정색
+                context.shadowColor = '#000000';
+
+                context.fillRect(10,10,100,100);
+            }
+            else {
+                alert('브라우저가 캔버스를 지원하지 않습니다.')
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="300">
+    </canvas>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캔버스 연습</title>
+    <script>
+        window.onload = function () {
+            const canvas = document.getElementById('canvas');
+            if (canvas.getContext) {
+                const context = canvas.getContext('2d');
+                //Image 객체 생성
+                const img = new Image();
+                img.src = '../files/landscape.jpg';
+                img.onload = function() {
+                                    //이미지 객체, x,y
+                    context.drawImage(img,10,10); //원래 크기 표기
+                                    //이미지 객체, x,y,width,height
+                    context.drawImage(img,10,500,200,100);
+                };
+
+            }
+            else {
+                alert('브라우저가 캔버스를 지원하지 않습니다.')
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="canvas" width="800" height="700"></canvas>
+</body>
+
+</html>
