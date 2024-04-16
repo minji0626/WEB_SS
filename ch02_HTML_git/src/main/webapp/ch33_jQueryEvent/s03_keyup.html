@@ -4,17 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hover 메서드를 이용한 mouseover,mouseout 이벤트 처리</title>
-    <style>
-
-    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
       $(function () {
-        
+        // keyup 이벤트 연결
+        $('textarea').keyup(function(){
+            // 입력한 글자 수를 구함
+            let inputLength = $(this).val().length;
+            let remain = 30 - inputLength;
+
+            // 문서 객체에 저장
+            $('h1').text(remain);
+
+            // 문서 객체의 색상을 변경
+            if(remain >= 0){
+                $('h1').css('color','black');
+            } else{
+                $('h1').css('color','red');
+            }
+        })
       });
     </script>
   </head>
   <body>
-
+    <div>
+        <p>지금 내 생각을</p>
+        <h1>30</h1>
+        <textarea cols="70" rows="5"></textarea>
+    </div>
   </body>
 </html>
