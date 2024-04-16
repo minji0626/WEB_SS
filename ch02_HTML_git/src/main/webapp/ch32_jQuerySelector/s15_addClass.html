@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addClass</title>
+    <style>
+        .high_light_0{
+            background: lightgoldenrodyellow;
+        }
+        .high_light_1{
+            background: lightsalmon;
+        }
+        .high_light_2{
+            background: lightblue;
+        }
+        .high_light_3{
+            background: lightgreen;
+        }
+        .high_light_4{
+            background: lightcoral;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('h1').addClass(function(index){
+            // index : 배열의 인덱스
+            return 'high_light_' + index; //클래스 명 반환
+        });
+    });
+    </script>
+</head>
+<body>
+    <h1>item-0</h1>
+    <h1>item-1</h1>
+    <h1>item-2</h1>
+    <h1>item-3</h1>
+    <h1>item-4</h1>
+</body>
+</html>

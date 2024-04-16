@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서 객체 생성 및 추가</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    /*
+    메서드 이름|설명
+$(A).append(B) | B를 A의 기존 자식의 뒤에 추가
+$(A).prepend(B) | B를 A의 기존 자식의 앞에 추가
+$(A).after(B) | B를 A의 뒤에 추가
+$(A).before(B) | B를 A의 앞에 추가
+    */
+
+    $(function(){
+        // $('div').append('<h1> Hello jQuery</h1>');
+        // $('div').prepend('<h1> Hello jQuery</h1>');
+        // $('div').after('<h1> Hello jQuery</h1>');
+        $('div').before('<h1> Hello jQuery</h1>');
+    });
+    </script>
+</head>
+<body>
+<div>
+    <h1>여기는 서울</h1>
+</div>
+</body>
+</html>

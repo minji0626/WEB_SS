@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력 양식 필터 선택자2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        //5초 후에 코드를 실행
+        setTimeout(function() {
+            // select 태그에서 선택한 option에 접근
+            let value = $('select > option:selected').val();
+            alert(value);
+        }, 5000);
+    });
+    </script>
+</head>
+<body>
+    <select>
+        <option>사과</option>
+        <option>바나나</option>
+        <option>멜론</option>
+        <option>딸기</option>
+        <option>포도</option>
+        <option>복숭아</option>
+    </select>
+</body>
+</html>

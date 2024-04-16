@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서 객체 생성</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    $(function(){
+        //이미지 크기 조정
+        $('img').css('width',250);
+
+        // 2초마다 매개 변수로 전달되는 함수 실행
+        setInterval(function(){
+            // 첫번째 이미지가 body의 맨 뒤로 옮겨진다.
+            $('img').first().appendTo('body'); 
+        },2000);
+    });
+    </script>
+</head>
+<body>
+    <img src="../files/Chrysanthemum.jpg">
+    <img src="../files/Desert.jpg">
+    <img src="../files/Hydrangeas.jpg">
+    <img src="../files/Jellyfish.jpg">
+    <img src="../files/Koala.jpg">
+</body>
+</html>

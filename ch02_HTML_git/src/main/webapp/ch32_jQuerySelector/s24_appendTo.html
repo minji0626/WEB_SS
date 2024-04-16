@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전체 선택자</title>
+    <title>문서 객체 생성</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-    // 문서가 준비 완료되면 매개 변수로 전달된 함수를 실행
-    $(document).ready(function(){
-        // * : 전체 선택자(문서 객체 선택)
-        $('*').css('color','red');
+    $(function(){
+        $('<img>').attr({
+            src:'../files/Koala.jpg',
+            width:400,
+            height:250
+        }).appendTo('body');
     });
     </script>
 </head>
 <body>
-    <h1>장마</h1>
+
 </body>
 </html>

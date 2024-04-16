@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    $(function(){
+        // 3초 후에 매개변수로 전달되는 함수를 실행
+        setTimeout(function(){
+            // empty 메서드는 특정 문서 객체의 후손을 모두 제거
+            $('div').empty();
+        }, 3000);
+
+        setTimeout(function(){
+            //remove 메서드는 특정 문서의 객체를 제거
+            $('p').remove();
+        }, 6000);
+    });
+    </script>
+</head>
+<body>
+<div>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+</div>
+<p>
+    <span>Content-0</span>
+    <span>Content-1</span>
+</p>
+</body>
+</html>
