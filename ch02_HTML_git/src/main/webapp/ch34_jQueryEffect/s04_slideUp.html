@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>slideUp, slideDown, slidToggle</title>
+    <style>
+        h1{
+            width: 300px;
+            height: 200px;
+            background-color: lemonchiffon;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $('#btn1').on('click', function(){
+            // 위로 올라가면서 숨겨짐
+            $('h1').slideUp(1000);
+        })
+        $('#btn2').on('click', function(){
+            // 아래로 내려가면 보여짐
+            $('h1').slideDown('slow');
+        })
+        $('#btn3').on('click', function(){
+            $('h1').slideToggle('fast');
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn1">slideUp</button>
+    <button id="btn2">slideDown</button>
+    <button id="btn3">slideToggle</button>
+    <h1>내용</h1>
+  </body>
+</html>

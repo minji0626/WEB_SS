@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>fadeTo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $('#btn1').on('click',function(){
+            $('#dog').fadeTo('slow',0.3);
+        });
+
+        $('#btn2').on('click',function(){
+            $('#dog').fadeTo(1000,1.0);
+        });
+
+        $('#btn3').on('click',function(){
+            $('#dog').fadeTo('slow',0.0);
+        });
+
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn1">투명도 (0.3)</button>
+    <button id="btn2">투명도 (1.0)</button>
+    <button id="btn3">투명도 (0.0)</button>
+    <div>
+        <img src="../files/dog.png" id="dog" width="120" height="100">
+    </div>
+  </body>
+</html>
