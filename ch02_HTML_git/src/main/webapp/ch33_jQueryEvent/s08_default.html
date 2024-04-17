@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>기본 이벤트 제거</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $('a').click(function(event){
+            $(this).css('background-color','skyblue');
+
+            // 기본이벤트 제거, 매개변수 event객체를 꼭 받아야한다.
+            event.preventDefault(); // return false 와 동일한 효과를 준다.
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>
+        <a href="https://www.naver.com">네이버</a>
+    </h1>
+  </body>
+</html>
