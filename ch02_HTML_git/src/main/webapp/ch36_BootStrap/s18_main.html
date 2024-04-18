@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 모바일 장치에서 웹사이트가 원하는 사이즈로 보여지게 처리 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <!-- BootStrap CSS 링크 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">🍀MinJi🍀</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"> </span>
+                </button>
+                <!-- 메뉴 시작 -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">일상</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown"
+                                data-bs-toggle="dropdown">About</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">연락처</a></li>
+                                <li><a class="dropdown-item" href="#">오시는 길</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Q&A</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 중앙 캐러셀 시작 -->
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- 첫 번째 item -->
+                <div class="carousel-item active">
+                    <img src="../files/Koala02.jpg" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <h5>First Slide Label</h5>
+                        <p>Koala Image</p>
+                    </div>
+                </div>
+                <!-- 두 번째 item -->
+                <div class="carousel-item">
+                    <img src="../files/Penguins02.jpg" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <h5>Second Slide Label</h5>
+                        <p>Penguin Image</p>
+                    </div>
+                </div>
+                <!-- 세 번째 item -->
+                <div class="carousel-item">
+                    <img src="../files/Lighthouse02.jpg" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <h5>Third Slide Label</h5>
+                        <p>LightHouse Image</p>
+                    </div>
+                </div>
+                <!-- 네 번째 item -->
+                <div class="carousel-item">
+                    <img src="../files/Tulips02.jpg" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <h5>Fourth Slide Label</h5>
+                        <p>Tulips Image</p>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- 중앙 캐러셀 끝 -->
+
+        <!-- 중앙 카드 그룹 시작 -->
+        <div class="card-group">
+            <div class="card border-secondary mb-3">
+                <div class="card-header">Header</div>
+                <div class="card-body text-secondary">
+                    <h5 class="card-title">Secondary card title</h5>
+                    <p>오늘은 날씨가 포근하고 저녁에 산들바람이 불어 더위가 사라질 것으로 예상됩니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 중앙 카드 그룹 끝 -->
+    </div>
+
+    <!-- BootStrap JS 링크 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
