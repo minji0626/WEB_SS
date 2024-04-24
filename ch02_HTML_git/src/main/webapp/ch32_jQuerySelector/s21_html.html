@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    $(function(){
+        // html 메서드는 태그의 내용을 제어(HTML 태그 허용)
+        $('div').html('<h1>날씨가 화창한 오후</h1>'); 
+        //=> innerHTML 속성을 구현한 것이다.
+
+        // text 메서드는 태그의 내용을 제어(text로만 표시)
+        $('p').text('<h1>놀이동산의 곰인형</h1>');
+        // => textContent
+
+        // $('div.header').html('여기는 서울입니다');
+
+        //접근하는 태그의 내용을 다르게 설정하기
+        $('div.header').html(function(index){
+            return'<h2>Header -'+index+'</h2>';
+        });
+
+        // 태그의 내용을 읽어서 내용을 새롭게 가공한 후 태그에 다시 설정
+        $('h1').html(function(index,html){
+            return '**' + html + '**';
+        })
+    });
+    </script>
+</head>
+<body>
+<div></div>
+<p></p>
+
+<div class="header"></div>
+<div class="header"></div>
+<div class="header"></div>
+
+<h1>서울-0</h1>
+<h1>서울-1</h1>
+<h1>서울-2</h1>
+
+</body>
+</html>

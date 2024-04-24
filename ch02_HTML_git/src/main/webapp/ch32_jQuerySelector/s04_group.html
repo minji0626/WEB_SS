@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그룹 선택자</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    // 문서가 준비 완료되면 매개 변수로 전달된 함수를 실행
+    $(document).ready(function(){
+       //그룹 선택자
+       $('h1,p').css('color','orange');
+       //특정 id 속성을 가지는 태그 선택
+       $('h3#target').css('color','skyblue')
+    });
+    </script>
+</head>
+<body>
+    <h1>강물은 흐르고</h1>
+    <h2>새벽 바람이 차다</h2>
+    <p>내 눈물도 흐르고</p>
+    <div>별이 흐른다</div>
+
+    <h3>header-0</h3>
+    <h3 id="target">header-1</h3>
+    <h3>header-2</h3>
+</body>
+</html>

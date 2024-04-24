@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자식 선택자 </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    // 문서가 준비 완료되면 매개 변수로 전달된 함수를 실행
+    $(document).ready(function(){
+        $('body>div').css('background-color','red');
+        $('body>div>ul').css('background-color','pink');
+        $('body>div>div').css('background-color','yellow');
+    });
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>한국</li>
+            <li>미국</li>
+            <li>중국</li>
+            <li>일본</li>
+            <li>호주</li>
+            <li>영국</li>
+            <li>프랑스</li>
+        </ul>
+        <div>서울</div>
+    </div>
+</body>
+</html>

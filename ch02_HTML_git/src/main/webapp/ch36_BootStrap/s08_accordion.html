@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 모바일 장치에서 웹사이트가 원하는 사이즈로 보여지게 처리 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <!-- BootStrap CSS 링크 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h4>기본 accordion</h4>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        겨울이 지나가고 봄이 왔습니다. 
+                        야외 활동이 늘어나고 사람들이 많은 장소에 갈 때는 특히 조심하세요.
+                    </div>
+                </div>
+            </div> <!-- end of item -->
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        겨울이 지나가고 봄이 왔습니다. 
+                        야외 활동이 늘어나고 사람들이 많은 장소에 갈 때는 특히 조심하세요.
+                    </div>
+                </div>
+            </div> <!-- end of item --> 
+        </div>
+
+        <h4>Flush</h4>
+        <div class="accordion accordion-flush" id="accordionExample2">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush_headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush_collapseOne">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="flush_collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                    <div class="accordion-body">
+                        겨울이 지나가고 봄이 왔습니다. 
+                        야외 활동이 늘어나고 사람들이 많은 장소에 갈 때는 특히 조심하세요.
+                    </div>
+                </div>
+            </div> <!-- end of item -->
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush_headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush_collapseTwo">
+                        Accordion Item #4
+                    </button>
+                </h2>
+                <div id="flush_collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                    <div class="accordion-body">
+                        겨울이 지나가고 봄이 왔습니다. 
+                        야외 활동이 늘어나고 사람들이 많은 장소에 갈 때는 특히 조심하세요.
+                    </div>
+                </div>
+            </div> <!-- end of item -->
+        </div>
+    </div>
+
+        <!-- BootStrap JS 링크 -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

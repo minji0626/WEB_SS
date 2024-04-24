@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hover 메서드를 이용한 mouseover,mouseout 이벤트 처리</title>
+    <style>
+        .reverse{
+            background-image: url(../files/landscape.jpg);
+            color: white;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        // hover 메서드를 이용한 이벤트 연결
+        $('h1').hover(function(){
+            // mouseover 이벤트 처리를 위한 이벤트 핸들러
+            $(this).addClass('reverse');
+        }, function(){
+            // mouseout 이벤트 처리를 위한 이벤트 핸들러
+            $(this).removeClass('reverse');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+  </body>
+</html>
+ 

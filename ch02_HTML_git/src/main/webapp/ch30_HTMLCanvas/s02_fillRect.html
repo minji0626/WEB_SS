@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캔버스 연습</title>
+    <script>
+        window.onload = function () {
+            const canvas = document.getElementById('canvas');
+            if (canvas.getContext) {
+                const context = canvas.getContext('2d');
+
+                //첫 번째 사각형
+                //색상 지정
+                context.fillStyle = 'rgb(200,0,0)';
+                //사각형
+                context.fillRect(10, 10, 100, 100); //사각형 -> x,y,width,height
+
+                //두 번째 사각형
+                //색상 및 알파값 지정(0.0 완전 투명 ~ 1.0 완전 불투명)
+                context.fillStyle = 'rgba(0,0,200,0.5)';
+                //사격형 그리기
+                context.fillRect(50,50,100,100);//사각형 -> x,y,width,height
+
+                //세 번째 사각형
+                //특정 영역을 지우고 오한전 투명
+                context.clearRect(60,60,40,40);
+
+                //네 번째 사각형
+                //선의 색상 지정
+                context.strokeStyle = 'rgb(200,0,250)';
+                //테두리만 있는 사각형
+                context.strokeRect(200,50,70,150);
+            } 
+            
+            else {
+                alert('브라우저가 캔버스를 지원하지 않습니다.')
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="300">
+    </canvas>
+</body>
+
+</html>

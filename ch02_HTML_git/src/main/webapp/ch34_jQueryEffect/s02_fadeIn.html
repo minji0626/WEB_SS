@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $('#btn1').on('click',function(){
+            $('#dog').fadeIn('slow');
+        });
+        $('#btn2').on('click',function(){
+            $('#dog').fadeOut(1000);
+        });
+        $('#btn3').on('click',function(){
+            $('#dog').fadeToggle('slow');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn1">fadeIn</button>
+    <button id="btn2">fadeOut</button>
+    <button id="btn3">fadeToggle</button>
+    <div>
+        <img src="../files/dog.png" id="dog" width="120" height="100" style="display: none;">
+    </div>
+  </body>
+</html>

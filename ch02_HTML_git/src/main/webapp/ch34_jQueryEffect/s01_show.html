@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>효과</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            
+            $('#btn1').on('click',function(){
+                //  속도값 : fast(200), normal(400), slow(600) - 밀리세컨드 지정 가능
+                // 태그 노출    // 속도값, 태그의 노출이 완료된 후 호출되는 함수
+                $('#dog').show('slow',function(){
+                    alert('사진 노출 성공');
+                });
+            });
+
+            $('#btn2').on('click',function(){
+                $('#dog').hide(1000, function(){
+                    alert('사짐 숨김 성공');
+                });
+            });
+
+            // 태그 노출, 숨김 이벤트 연결
+            $('#btn3').on('click',function(){
+                // 선택한 요소가 보이면 숨기고, 숨겨져 있으면 나타나도록 처리
+                $('#dog').toggle('slow')
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btn1">Show</button>
+    <button id="btn2">Hide</button>
+    <button id="btn3">Toggle</button>
+    <br>
+
+    <img src="../files/dog.png" id="dog" width="120" height="100" style="display: none;">
+</body>
+
+</html>

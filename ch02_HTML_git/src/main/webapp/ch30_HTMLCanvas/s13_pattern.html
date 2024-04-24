@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캔버스 연습</title>
+    <script>
+        window.onload = function () {
+            const canvas = document.getElementById('canvas');
+            if (canvas.getContext) {
+                const context = canvas.getContext('2d');
+                //Image 객체 생성
+                const img = new Image();
+                img.src = '../files/pattern.png';
+                img.onload = function() {
+                    //이미지 반복 지정
+                    let pttn = context.createPattern(img,'repeat');
+                    // 생성한 패턴 지정
+                    context.fillStyle = pttn;
+                    context.fillRect(0,0,500,300);
+                };
+
+            }
+            else {
+                alert('브라우저가 캔버스를 지원하지 않습니다.')
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="300"></canvas>
+</body>
+
+</html>

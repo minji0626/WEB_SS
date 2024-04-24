@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캔버스 연습</title>
+    <script>
+        window.onload = function () {
+            const canvas = document.getElementById('canvas');
+            if (canvas.getContext) {
+                const context = canvas.getContext('2d');
+                /*
+                선 그리기
+                1. 패스 시작
+                2. 선 그리기
+                3. 패스 닫기
+                */
+
+                context.beginPath(); //패스 시작
+
+                context.moveTo(50, 50); // 시작점을 표시함
+                context.lineTo(80, 80); //왼쪽 작은 직선을 그림
+
+                context.moveTo(140, 80); //새로운 시작점 표시
+                context.lineTo(170, 50); //오른쪽 작은 직선
+
+                context.moveTo(60, 150) //새로운 시작점 표시
+                context.lineTo(170, 150); //아래 직선
+
+                context.closePath();
+
+                //테두리를 지정하지 않으면 선이 생기지 않음
+                context.stroke(); //경로에 태두리 표시
+            }
+
+            else {
+                alert('브라우저가 캔버스를 지원하지 않습니다.')
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="300">
+    </canvas>
+</body>
+
+</html>

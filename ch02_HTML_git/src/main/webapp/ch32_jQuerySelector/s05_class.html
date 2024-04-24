@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 선택자 이용</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    // 문서가 준비 완료되면 매개 변수로 전달된 함수를 실행
+    $(document).ready(function(){
+        $('.item').css('color','orange');
+        $('.item.select').css('color','skyblue');
+        $('h1.item').css('background-color','red');
+
+    });
+    </script>
+</head>
+<body>
+    <h1 class="item">Header-0</h1>
+    <h2 class="item">Header-1</h2>
+    <h1 class="item select">Header-2</h1>
+    <h1 class="item">Header-3</h1>
+
+</body>
+</html>

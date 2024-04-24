@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력 양식 필터 선택자2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        // attr 메서드 : 태그의 속성 제어
+        $('input:checked').attr('checked', false);
+        $('input:disabled').val('클릭할 수 없음');
+        $('input[type=button]:enabled').val('클릭할 수 있음');
+
+    });
+    </script>
+</head>
+<body>
+    <input type="checkbox" name="city" value="서울" checked>서울
+    <input type="button" value="확인" disabled>
+    <input type="button" value="확인">
+</body>
+</html>

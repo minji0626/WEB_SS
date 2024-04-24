@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다음 맵 사용해보기</title>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=db3165e66ef2a77e38937dec96c353af"></script>
+    <script>
+        /*
+        1. https://developers.kakao.com/ 로 이동
+        2. 로그인
+        3. 웹 개발 시작 앱 생성
+        4. 설정 - 일반
+        5. 플랫폼 - 웹 http://localhost :8080 으로 지정. ip 사용시 ip 지정
+        6. Javascript 키 복사해서 script에 표시
+        7. 자바스크립트 관련 지도 가이드- https://apis.map.kakao.com/web/guide
+        */
+
+        window.onload = function() {
+            if (!navigator.geolocation) {
+                alert('본 기기가 위치 정보를 지원하지 않습니다.');
+                return;
+            }
+            navigator.geolocation.getCurrentPosition(function(position) {
+                let lat = position.coords.latitude;
+                let lon = position.coords.longitude;
+
+                //지도를 표시할 div
+                const mapContainer = document.getElementById('map');
+
+                //지도에 설정할 옵션 값 지정
+                const mapOption = {
+                    center: new daum.maps.LatLng(lat, lon),
+                    level: 3,
+                };
+
+                //지도 생성
+                const map = new daum.maps.Map(mapContainer, mapOption);
+                const pos = new daum.maps.LatLng(lat, lon);
+                const marker = new daum.maps.Marker({
+                    position: pos,
+                    clickable: true
+                });
+                marker.setMap(map);
+
+                //마커를 클릭했을 때 마커 위에 표시할 인포윈도우 내용 명시
+                let iwContent = '<div style="padding:10px;width:250px;height:38px;">'+lat+','+lon+'<br>나 여기 있어요!! </div>';
+
+                //인포 윈도우 생성
+                const infowindow = new daum.maps.InfoWindow({
+                    content:iwContent,
+                    removable:true
+                });
+
+                //마커에 클릭 이벤트 등록
+                daum.maps.event.addListener(marker,'click',function(){
+                    //마커 위에 인포 윈도우를 표시
+                    infowindow.open(map,marker);
+                });
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div id="map" style="width: 100%; height: 500px;"></div>
+</body>
+
+</html>
